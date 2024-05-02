@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Card } from "./_components/ui/card";
+
 
 export default function Home() {
   return (
