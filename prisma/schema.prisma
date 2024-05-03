@@ -36,10 +36,10 @@ model Product {
   name               String
   description        String
   imageUrl           String
-  price              String
+  price              Int
   discountPercentage Int        @default(0)
   restaurantId       String
   categoryId         String
   restaurant         Restaurant @relation(fields: [restaurantId], references: [id])
-  categories         Category   @relation(fields: [categoryId], references: [id])
+  category           Category   @relation(fields: [categoryId], references: [id])
 }
