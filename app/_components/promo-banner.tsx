@@ -2,6 +2,7 @@ import Image, { ImageProps } from "next/image";
 
 const PromoBanner = (props: ImageProps) => {
   return (
+    // @ts-ignore
     <Image
       {...props}
       width={0}

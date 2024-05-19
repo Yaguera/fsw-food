@@ -1,8 +1,9 @@
 import { Restaurant } from "@prisma/client";
-import { BikeIcon, HeartIcon, StarIcon, TimerIcon } from "lucide-react";
+import { HeartIcon, StarIcon, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import { formatCurrency } from "../_helpers/price";
 import { Button } from "./ui/button";
+import IconBike from "../../public/icon.svg";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
@@ -39,7 +40,7 @@ const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
         <div className="flex gap-4 pt-1">
           {/* custo de entrega */}
           <div className="flex items-center gap-1">
-            <BikeIcon className="text-primary" size={16} />
+            <Image className="text-primary" src={IconBike} alt="icone bike" />
             <span className="text-base text-muted-foreground">
               {Number(restaurant.deliveryFee) === 0
                 ? "Entrega grátis"
